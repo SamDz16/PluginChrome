@@ -1,0 +1,10 @@
+{
+	"name": "Plugin Chrome First Test",
+	"description": "Click on the button to display 'Hello, World!'",
+	"version": "1.0",
+	"manifest_version": 3,
+	"action": {
+		"default_title": "Hello, World!",
+		"default_popup": "popup.html"
+	}
+}
