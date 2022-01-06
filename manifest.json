@@ -1,10 +1,17 @@
 {
-	"name": "Plugin Chrome First Test",
-	"description": "Click on the button to display 'Hello, World!'",
+	"manifest_version": 2,
+	"name": "Trigger Luis Algorithm",
+	"description": "Give user possibility to choose a strategy",
 	"version": "1.0",
-	"manifest_version": 3,
-	"action": {
-		"default_title": "Hello, World!",
+	"author": "samy",
+	"content_scripts": [
+		{
+			"matches": ["https://dbpedia.org/sparql"],
+			"js": ["content.js"]
+		}
+	],
+	"browser_action": {
+		"default_icon": "icons/default_icon.png",
 		"default_popup": "popup.html"
 	}
 }
