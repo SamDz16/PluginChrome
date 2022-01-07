@@ -7,9 +7,13 @@
 	"content_scripts": [
 		{
 			"matches": ["https://dbpedia.org/sparql"],
-			"js": ["content.js"]
+			"js": ["libs/vuejs_lib.js", "wasm_exec.js","content.js"]
 		}
 	],
+	"permissions": [
+        "https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"
+    ],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'",
 	"browser_action": {
 		"default_icon": "icons/default_icon.png",
 		"default_popup": "popup.html"
